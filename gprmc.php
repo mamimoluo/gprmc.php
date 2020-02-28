@@ -53,7 +53,7 @@ class GPRMC
 
   function __construct($statement)
   {
-    $this->RMCmeta = $meta = split(',', $statement);
+    $this->RMCmeta = $meta = explode(',', $statement);
     if(count($meta) < 12 && $meta[0] != '$GPRMC')
       return;
 
